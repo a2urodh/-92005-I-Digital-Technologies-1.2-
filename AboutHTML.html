@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!---Ensures any device can use-->
+    <title>Document</title>
+    <link rel="stylesheet" href="AssessmentCS.css">
+    <link rel="preconnect" href="http s://fonts.gstatic.com">
+    <link href="https://fonts.googleap is.com/css?family=Poppins:wght@10 0;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <section class="about-header">
+        <nav>
+            <a href="AssessmentCS.html"><img src="footer-logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="AssessmentCS.html">HOME</a></li>
+                    <li><a href="AboutHTML.html">ABOUT</a></li>
+                    <li><a href="Coursehtml.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="content.html">CONTACT</a></li>
+                </ul>
+
+            </div>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+        </nav>
+        <h1>About Us</h1>
+
+
+
+
+    </section>
+
+
+
+    <!---- This prevents the user to zoom out of the screen -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!---- about us content -->
+
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>Computer Science</h1>
+                <p>Computer science is rapidly becoming one of the most critical subjects of the future, driven by the explosive growth of artificial intelligence (AI). As AI transforms industries—from healthcare to finance to education—the demand for skilled professionals who can design, develop, and manage these technologies is skyrocketing. Understanding computer science is not just about coding; it's about unlocking the potential of AI to solve complex global challenges, making it an essential subject for anyone who wants to be at the forefront of innovation in the digital age.
+                </p>
+                <a href="" class="hero-btn blue-btn">EXPLORE NOW</a>
+            </div>
+            <div class="about-col">
+                <img src="JS.jpg">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    
+    <!---- Footer  ---->
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Computer science is pivotal to the future. We equip you with vital skills in coding and AI, empowering you to lead and innovate in technology.</p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------JavaScript for toggle menu------->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+
+        anime.timeline({ loop: true })
+            .add({
+                targets: '.ml5 .line',
+                opacity: [0.5, 1],
+                scaleX: [0, 1],
+                easing: "easeInOutExpo",
+                duration: 700
+            }).add({
+                targets: '.ml5 .line',
+                duration: 600,
+                easing: "easeOutExpo",
+                translateY: (el, i) => (-0.625 + 0.625 * 2 * i) + "em"
+            }).add({
+                targets: '.ml5 .ampersand',
+                opacity: [0, 1],
+                scaleY: [0.5, 1],
+                easing: "easeOutExpo",
+                duration: 600,
+                offset: '-=600'
+            }).add({
+                targets: '.ml5 .letters-left',
+                opacity: [0, 1],
+                translateX: ["0.5em", 0],
+                easing: "easeOutExpo",
+                duration: 600,
+                offset: '-=300'
+            }).add({
+                targets: '.ml5 .letters-right',
+                opacity: [0, 1],
+                translateX: ["-0.5em", 0],
+                easing: "easeOutExpo",
+                duration: 600,
+                offset: '-=600'
+            }).add({
+                targets: '.ml5',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+
+
+    </script>
+
+
+</body>
+
+</html>

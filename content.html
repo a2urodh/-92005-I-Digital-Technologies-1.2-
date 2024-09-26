@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!---Ensures any device can use-->
+    <title>Document</title>
+    <link rel="stylesheet" href="AssessmentCS.css">
+    <link rel="preconnect" href="http s://fonts.gstatic.com">
+    <link href="https://fonts.googleap is.com/css?family=Poppins:wght@10 0;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <section class="content-header">
+        <nav>
+            <a href="AssessmentCS.html"><img src="footer-logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="AssessmentCS.html">HOME</a></li>
+                    <li><a href="AboutHTML.html">ABOUT</a></li>
+                    <li><a href="Coursehtml.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="content.html">CONTACT</a></li>
+                </ul>
+
+            </div>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+        </nav>
+        <h1>Contact Us</h1>
+    </section>
+
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2076.4218597032036!2d174.87293714075508!3d-36.9092731689288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d4bea5c09f3c5%3A0x2711108ad97f443c!2sSaint%20Kentigern%20College!5e1!3m2!1sen!2snz!4v1724561172776!5m2!1sen!2snz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="contact-us">
+
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <i class="fa fa-house"></i>
+                    <span>
+                        <h5>Saint Kentigern College, Jack Paine Center (JPC)</h5>
+                        <p>130 Pakuranga Road, Pakuranga, Auckland 2010</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <span>
+                        <h5>HOD of NCEA Computer Science</h5>
+                        <p>J Horgan : jo.horgan@saintkentigern.com</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <span>
+                        <h5>HOD of IB Computer Science</h5>
+                        <p>A Wilde : Anca.Wilde@saintkentigern.com</p>
+                    </span>
+                </div>
+            </div>
+    <div class="contact-col">
+        
+        <form action="form-handler.php" method="post">
+            <input type="text" name="name" placeholder="Enter Your Name" required>
+            <input type="email" name="email" placeholder="Enter Your Email" required>
+            <input type="text" name="subject" placeholder="Enter Your Subject" required>
+            <textarea rows="8" name="message" placeholder="Message" required></textarea>
+            <button type="submit" class="hero-btn blue-btn">Send 
+            Message</button>
+        </form>
+
+
+
+    </div>
+        </div>
+
+    </section>
+
+
+    <!---- This prevents the user to zoom out of the screen -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+
+
+
+
+
+    
+    <!---- Footer  ---->
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p></p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------JavaScript for toggle menu------->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+
+        anime.timeline({ loop: true })
+            .add({
+                targets: '.ml5 .line',
+                opacity: [0.5, 1],
+                scaleX: [0, 1],
+                easing: "easeInOutExpo",
+                duration: 700
+            }).add({
+                targets: '.ml5 .line',
+                duration: 600,
+                easing: "easeOutExpo",
+                translateY: (el, i) => (-0.625 + 0.625 * 2 * i) + "em"
+            }).add({
+                targets: '.ml5 .ampersand',
+                opacity: [0, 1],
+                scaleY: [0.5, 1],
+                easing: "easeOutExpo",
+                duration: 600,
+                offset: '-=600'
+            }).add({
+                targets: '.ml5 .letters-left',
+                opacity: [0, 1],
+                translateX: ["0.5em", 0],
+                easing: "easeOutExpo",
+                duration: 600,
+                offset: '-=300'
+            }).add({
+                targets: '.ml5 .letters-right',
+                opacity: [0, 1],
+                translateX: ["-0.5em", 0],
+                easing: "easeOutExpo",
+                duration: 600,
+                offset: '-=600'
+            }).add({
+                targets: '.ml5',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+
+
+    </script>
+
+
+</body>
+
+</html>
